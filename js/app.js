@@ -19,30 +19,52 @@
 // }
 // alert(risult)
 // end of
-let grounScore = Number(prompt("put yor  groun score"));
-let religionScore = Number(prompt("put yor  religion Score"));
-let arabikScore = Number(prompt("put yor art arabik score"));
-let englishScore = Number(prompt("put yor  english score"));
-let scienceScore = Number(prompt("put yor  science score"));
-let mathScore = Number(prompt("put yor  math score"));
-let asportScore = Number(prompt("put yor  asport score"));
-let artScore = Number(prompt("put yor art  score"));
-let jubScore = Number(prompt("put yor  jub score"));
-let all =
-  jubScore +
-  artScore +
-  asportScore +
-  mathScore +
-  scienceScore +
-  englishScore +
-  arabikScore +
-  religionScore +
-  grounScore;
-if (all > 180) {
-  alert("fals");
-} 
-else{
-  all / 9;
-  let end = all
+let frontEndBasic = [
+  student1 = {
+    name: "Amir hossein ardani",
+    classActivity: "C-",
+    handout: "C-",
+    exam: "C-",
+    overal: "C-",
+  },
+  student2 = {
+    name: "Arshia Zahedi",
+    classActivity: "B-",
+    handout: "B-",
+    exam: "C+",
+    overal: "B-",
+  },
+  student3 = {
+    name: "Amir Ali Zahedi",
+    classActivity: "B-",
+    handout: "C+",
+    exam: "C+",
+    overal: "C+",
+  },
+  student4 = {
+    name: "Taha Zanghaneh",
+    classActivity: "B+",
+    handout: "B+",
+    exam: "B+",
+    overal: "B+",
+  },
+  student5 = {
+    name: "Mahdi Zanghaneh",
+    classActivity: "B+",
+    handout: "B-",
+    exam: "B+",
+    overal: "B+",
+  },
+  student6 = {
+    name: "Pouya Fakhri",
+    classActivity: "A+",
+    handout: "B+",
+    exam: "A-",
+    overal: "A-",
+  },
+];
+for(let i =0;i<7;i++){
+  if(frontEndBasic[i].classActivity=='C-'){
+    console.log(frontEndBasic[i])
+  }
 }
-alert(end);
