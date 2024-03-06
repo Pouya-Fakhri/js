@@ -18,53 +18,88 @@
 //     risult = num1 ** num2
 // }
 // alert(risult)
+// 
 // end of
-let frontEndBasic = [
-  student1 = {
-    name: "Amir hossein ardani",
-    classActivity: "C-",
-    handout: "C-",
-    exam: "C-",
-    overal: "C-",
-  },
-  student2 = {
-    name: "Arshia Zahedi",
-    classActivity: "B-",
-    handout: "B-",
-    exam: "C+",
-    overal: "B-",
-  },
-  student3 = {
-    name: "Amir Ali Zahedi",
-    classActivity: "B-",
-    handout: "C+",
-    exam: "C+",
-    overal: "C+",
-  },
-  student4 = {
-    name: "Taha Zanghaneh",
-    classActivity: "B+",
-    handout: "B+",
-    exam: "B+",
-    overal: "B+",
-  },
-  student5 = {
-    name: "Mahdi Zanghaneh",
-    classActivity: "B+",
-    handout: "B-",
-    exam: "B+",
-    overal: "B+",
-  },
-  student6 = {
-    name: "Pouya Fakhri",
-    classActivity: "A+",
-    handout: "B+",
-    exam: "A-",
-    overal: "A-",
-  },
-];
-for(let i =0;i<7;i++){
-  if(frontEndBasic[i].classActivity=='C-'){
-    console.log(frontEndBasic[i])
+// 
+// let frontEndBasic = [
+//   student1 = {
+//     name: "Amir hossein ardani",
+//     classActivity: "C-",
+//     handout: "C-",
+//     exam: "C-",
+//     overal: "C-",
+//   },
+//   student2 = {
+//     name: "Arshia Zahedi",
+//     classActivity: "B-",
+//     handout: "B-",
+//     exam: "C+",
+//     overal: "B-",
+//   },
+//   student3 = {
+//     name: "Amir Ali Zahedi",
+//     classActivity: "B-",
+//     handout: "C+",
+//     exam: "C+",
+//     overal: "C+",
+//   },
+//   student4 = {
+//     name: "Taha Zanghaneh",
+//     classActivity: "B+",
+//     handout: "B+",
+//     exam: "B+",
+//     overal: "B+",
+//   },
+//   student5 = {
+//     name: "Mahdi Zanghaneh",
+//     classActivity: "B+",
+//     handout: "B-",
+//     exam: "B+",
+//     overal: "B+",
+//   },
+//   student6 = {
+//     name: "Pouya Fakhri",
+//     classActivity: "A+",
+//     handout: "B+",
+//     exam: "A-",
+//     overal: "A-",
+//   },
+// ];
+// for(let i in frontEndBasic){
+//   if(frontEndBasic[i].classActivity=='C-'){
+//     console.log(frontEndBasic[i])
+//   }
+// }
+let moneyTipe = prompt('What do you want change to?(dolar,dinar,pond,yun,lir)');
+let moneyValue = Number(prompt('How much do you want to change?'));
+function moneyChenger(moneyTipe,moneyValue) {
+  let risult
+  switch(moneyTipe){
+    case 'dolar':
+      risult = moneyValue * 60000
+      break;
+
+    case 'dinar':
+      risult = moneyValue * 36000
+      break;
+
+    case 'pond':
+      risult = moneyValue * 40000
+      break;
+
+    case 'yun':
+      risult = moneyValue * 28000
+      break;
+
+    case 'lir':
+      risult = moneyValue * 8000
+      break;
+    default:
+      alert('Brother, I have explained what to write, why you are typing chert and pert')
+      break;
+
+    }
+    return(risult);
   }
-}
+
+console.log(moneyChenger(moneyTipe,moneyValue))
