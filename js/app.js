@@ -70,36 +70,53 @@
 //     console.log(frontEndBasic[i])
 //   }
 // }
-let moneyTipe = prompt('What do you want change to?(dolar,dinar,pond,yun,lir)');
-let moneyValue = Number(prompt('How much do you want to change?'));
-function moneyChenger(moneyTipe,moneyValue) {
-  let risult
-  switch(moneyTipe){
-    case 'dolar':
-      risult = moneyValue * 60000
-      break;
+// 
+// the end 
+// 
+// let moneyTipe = prompt('What do you want change to?(dolar,dinar,pond,yun,lir)');
+// let moneyValue = Number(prompt('How much do you want to change?'));
+// function moneyChenger(moneyTipe,moneyValue) {
+//   let risult
+//   switch(moneyTipe){
+//     case 'dolar':
+//       risult = moneyValue * 60000
+//       break;
+// 
+//     case 'dinar':
+//       risult = moneyValue * 36000
+//       break;
+// 
+//     case 'pond':
+//       risult = moneyValue * 40000
+//       break;
+// 
+//     case 'yun':
+//       risult = moneyValue * 28000
+//       break;
+// 
+//     case 'lir':
+//       risult = moneyValue * 8000
+//       break;
+//     default:
+//       alert('Brother, I have explained what to write, why you are typing chert and pert')
+//       break;
+// 
+//     }
+//     return(risult);
+//   }
 
-    case 'dinar':
-      risult = moneyValue * 36000
-      break;
+// console.log(moneyChenger(moneyTipe,moneyValue))
 
-    case 'pond':
-      risult = moneyValue * 40000
-      break;
+// the end
 
-    case 'yun':
-      risult = moneyValue * 28000
-      break;
+let numbers =[2,3,8,9]
 
-    case 'lir':
-      risult = moneyValue * 8000
-      break;
-    default:
-      alert('Brother, I have explained what to write, why you are typing chert and pert')
-      break;
-
-    }
-    return(risult);
+function pluser(ary) {
+  let result = 0
+  for(let i in ary){
+    result += numbers[i]
   }
-
-console.log(moneyChenger(moneyTipe,moneyValue))
+  let resultNumber = [result]
+  return(resultNumber)
+}
+console.log(pluser(numbers))
