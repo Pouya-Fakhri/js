@@ -18,9 +18,9 @@
 //     risult = num1 ** num2
 // }
 // alert(risult)
-// 
+//
 // end of
-// 
+//
 // let frontEndBasic = [
 //   student1 = {
 //     name: "Amir hossein ardani",
@@ -70,9 +70,9 @@
 //     console.log(frontEndBasic[i])
 //   }
 // }
-// 
-// the end 
-// 
+//
+// the end
+//
 // let moneyTipe = prompt('What do you want change to?(dolar,dinar,pond,yun,lir)');
 // let moneyValue = Number(prompt('How much do you want to change?'));
 // function moneyChenger(moneyTipe,moneyValue) {
@@ -81,26 +81,26 @@
 //     case 'dolar':
 //       risult = moneyValue * 60000
 //       break;
-// 
+//
 //     case 'dinar':
 //       risult = moneyValue * 36000
 //       break;
-// 
+//
 //     case 'pond':
 //       risult = moneyValue * 40000
 //       break;
-// 
+//
 //     case 'yun':
 //       risult = moneyValue * 28000
 //       break;
-// 
+//
 //     case 'lir':
 //       risult = moneyValue * 8000
 //       break;
 //     default:
 //       alert('Brother, I have explained what to write, why you are typing chert and pert')
 //       break;
-// 
+//
 //     }
 //     return(risult);
 //   }
@@ -109,14 +109,39 @@
 
 // the end
 
-let numbers =[2,3,8,9]
+// let numbers =[2,3,8,9]
 
-function pluser(ary) {
-  let result = 0
-  for(let i in ary){
-    result += numbers[i]
+// function pluser(ary) {
+//   let result = 0
+//   for(let i in ary){
+//     result += numbers[i]
+//   }
+//   let resultNumber = [result]
+//   return(resultNumber)
+// }
+// console.log(pluser(numbers))
+
+// the end
+
+//start
+
+let body = document.querySelector(".body");
+let form = document.querySelector("#form");
+form.addEventListener("submit", (e) => {
+  let optionColor = e.target.color.value;
+  console.log(optionColor);
+  switch (true) {
+    case optionColor == "red":
+      body.classList.add("red");
+      break;
+    case optionColor == "blue":
+      body.classList.add("blue");
+      break;
+    case optionColor == "green":
+      body.classList.add("green");
+      break;
   }
-  let resultNumber = [result]
-  return(resultNumber)
-}
-console.log(pluser(numbers))
+  e.preventDefault();
+});
+
+// the end
