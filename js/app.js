@@ -125,23 +125,40 @@
 
 //start
 
-let body = document.querySelector(".body");
-let form = document.querySelector("#form");
-form.addEventListener("submit", (e) => {
-  let optionColor = e.target.color.value;
-  console.log(optionColor);
-  switch (true) {
-    case optionColor == "red":
-      body.classList.add("red");
-      break;
-    case optionColor == "blue":
-      body.classList.add("blue");
-      break;
-    case optionColor == "green":
-      body.classList.add("green");
-      break;
-  }
-  e.preventDefault();
-});
+// let body = document.querySelector(".body");
+// let form = document.querySelector("#form");
+// form.addEventListener("submit", (e) => {
+//   let optionColor = e.target.color.value;
+//   console.log(optionColor);
+//   switch (true) {
+//     case optionColor == "red":
+//       body.classList.add("red");
+//       break;
+//     case optionColor == "blue":
+//       body.classList.add("blue");
+//       break;
+//     case optionColor == "green":
+//       body.classList.add("green");
+//       break;
+//   }
+//   e.preventDefault();
+// });
 
 // the end
+
+// start
+
+const Objctlist = []
+const form = document.querySelector("#form");
+form.addEventListener('submit',(e)=>{
+  const newObject = {
+    objectName:e.target.name.value,
+    objectBuy:e.target.buy.value,
+  }
+  
+  Objctlist.push(newObject)
+  console.log(Objctlist)
+  e.target.buy.value = '';
+  e.target.name.value = '';
+  e.preventDefault()
+})
