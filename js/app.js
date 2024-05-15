@@ -175,9 +175,29 @@ userInfo.addEventListener('submit',(e)=>
     name: e.target.userName.value.trim().split(' '),
     FatherName: e.target.userFatherName.value.trim().split(' '),
     adres: e.target.userAdres.value.trim().replace(' ',','),
+    birthDay: e.target.birthDay.value.split('-'),
   }
-  alert(`سلام ${newUser.name[0]} فرزند ${newUser.FatherName[0]} با ادرس ${newUser.adres}`)
+  
 
+
+  alert(`سلام ${newUser.name[0]} فرزند ${newUser.FatherName[0]} با ادرس ${newUser.adres} و سنه ${userAgeCarcuretor(newUser.birthDay[2],newUser.birthDay[1],newUser.birthDay[0])}`)
+  
   console.log(newUser)
+  
   e.preventDefault()
 })
+
+
+function userAgeCarcuretor(day,muonth,year)
+{
+  const birthDate = [year,muonth,day];
+  const birthTimestamp = (new Date(...birthDate).getTime()) / 1000;
+  const currentTimestamp = Date.now() / 1000;
+  
+  const secondsInYear = 31536000;
+  
+  const age = Math.floor((currentTimestamp - birthTimestamp) / secondsInYear);
+  return age
+}
+
+// ended
