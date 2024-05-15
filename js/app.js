@@ -148,17 +148,36 @@
 
 // start
 
-const Objctlist = []
-const form = document.querySelector("#form");
-form.addEventListener('submit',(e)=>{
-  const newObject = {
-    objectName:e.target.name.value,
-    objectBuy:e.target.buy.value,
-  }
+// const Objctlist = []
+// const form = document.querySelector("#form");
+// form.addEventListener('submit',(e)=>{
+//   const newObject = {
+//     objectName:e.target.name.value,
+//     objectBuy:e.target.buy.value,
+//   }
   
-  Objctlist.push(newObject)
-  console.log(Objctlist)
-  e.target.buy.value = '';
-  e.target.name.value = '';
+//   Objctlist.push(newObject)
+//   console.log(Objctlist)
+//   e.target.buy.value = '';
+//   e.target.name.value = '';
+//   e.preventDefault()
+// })
+
+// ended
+
+// start
+
+
+const userInfo = document.querySelector('#userInfo');
+userInfo.addEventListener('submit',(e)=>
+{
+  let newUser ={
+    name: e.target.userName.value.trim().split(' '),
+    FatherName: e.target.userFatherName.value.trim().split(' '),
+    adres: e.target.userAdres.value.trim().replace(' ',','),
+  }
+  alert(`سلام ${newUser.name[0]} فرزند ${newUser.FatherName[0]} با ادرس ${newUser.adres}`)
+
+  console.log(newUser)
   e.preventDefault()
 })
